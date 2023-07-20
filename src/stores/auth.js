@@ -13,7 +13,7 @@ export const useAuthStore = defineStore('auth', () => {
     try {
       const { data } = await axios.get('/api/user')
 
-      user.value = data
+      user.value = data.data
     } catch (error) {
       if (error.response.status === 409) {
         router.push({ name: 'verify-email' })

@@ -4,6 +4,12 @@ import AppLayout from '../layouts/AppLayout.vue'
 
 <template>
   <AppLayout>
-    <div>Hello</div>
+    <div class="text-center">
+      <div>Welcome to Dashboard</div>
+      <div>
+        <router-link :to="{ name: 'tasks' }">View Task</router-link> or/and
+        <router-link :to="{ name: 'task-create' }">Create Task</router-link>
+      </div>
+    </div>
   </AppLayout>
 </template>

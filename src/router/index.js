@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import TaskIndex from '../views/tasks/Index.vue'
+import TaskCreate from '../views/tasks/Create.vue'
+import TaskEdit from '../views/tasks/Edit.vue'
 import { useAuthStore } from '../stores/auth'
 
 const router = createRouter({
@@ -10,6 +13,24 @@ const router = createRouter({
       name: 'home',
       meta: { title: 'Home', middleware: ['auth'] },
       component: Home
+    },
+    {
+      path: '/tasks',
+      name: 'tasks',
+      meta: { title: 'Tasks', middleware: ['auth'] },
+      component: TaskIndex
+    },
+    {
+      path: '/tasks/create',
+      name: 'task-create',
+      meta: { title: 'Task Create', middleware: ['auth'] },
+      component: TaskCreate
+    },
+    {
+      path: '/tasks/:id/edit',
+      name: 'task-edit',
+      meta: { title: 'Task Edit', middleware: ['auth'] },
+      component: TaskEdit
     },
     {
       path: '/register',
