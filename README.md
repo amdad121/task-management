@@ -1,4 +1,4 @@
-# task-management-frontend
+# task-management
 
 This is cooke bases Task management system. so, you need to server run with same ip address.
 
