@@ -1,7 +1,8 @@
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import AppLayout from '../../layouts/AppLayout.vue'
 import axios from '../../utils/axios'
+import moment from 'moment'
 
 const tasks = ref([])
 const status = ref('')
@@ -22,6 +23,8 @@ const deleteTask = async (id) => {
     status.value = response.data.message
   }
 }
+
+const dateFormat = (date) => moment(date).format('DD-MM-YYYY h:m A')
 </script>
 
 <template>
@@ -45,10 +48,10 @@ const deleteTask = async (id) => {
           </thead>
           <tbody>
             <tr class="border-b" v-for="(task, index) in tasks" :key="index">
-              <td class="p-2 text-center">{{ task.id }}</td>
+              <td class="p-2">{{ task.id }}</td>
               <td class="p-2">{{ task.title }}</td>
               <td class="p-2">{{ task.description }}</td>
-              <td class="p-2">{{ task.deadline }}</td>
+              <td class="p-2">{{ dateFormat(task.deadline) }}</td>
               <td class="p-2">{{ task.user?.name }}</td>
               <td class="p-2 space-x-2">
                 <router-link
@@ -72,3 +75,5 @@ const deleteTask = async (id) => {
     </div>
   </AppLayout>
 </template>
+
+<style scoped></style>

@@ -157,3 +157,5 @@ const editTask = async () => {
     </div>
   </AppLayout>
 </template>
+
+<style scoped></style>

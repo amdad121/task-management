@@ -27,6 +27,9 @@ const { user, logout } = useAuthStore()
             <RouterLink class="px-2 py-2 hover:shadow-inner" :to="{ name: 'home' }"
               >Dashboard</RouterLink
             >
+            <RouterLink class="px-2 py-2 hover:shadow-inner" :to="{ name: 'users' }"
+              >All Users</RouterLink
+            >
             <RouterLink class="px-2 py-2 hover:shadow-inner" :to="{ name: 'tasks' }"
               >All Tasks</RouterLink
             >

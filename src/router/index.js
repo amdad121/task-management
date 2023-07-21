@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import UserIndex from '../views/users/Index.vue'
 import TaskIndex from '../views/tasks/Index.vue'
 import TaskCreate from '../views/tasks/Create.vue'
 import TaskEdit from '../views/tasks/Edit.vue'
@@ -13,6 +14,12 @@ const router = createRouter({
       name: 'home',
       meta: { title: 'Home', middleware: ['auth'] },
       component: Home
+    },
+    {
+      path: '/users',
+      name: 'users',
+      meta: { title: 'Users', middleware: ['auth'] },
+      component: UserIndex
     },
     {
       path: '/tasks',

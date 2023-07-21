@@ -15,9 +15,7 @@ export const useAuthStore = defineStore('auth', () => {
 
       user.value = data.data
     } catch (error) {
-      if (error.response.status === 409) {
-        router.push({ name: 'verify-email' })
-      }
+      console.log(error.response)
     }
   }
 

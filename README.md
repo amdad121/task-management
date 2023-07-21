@@ -1,8 +1,8 @@
 # task-management
 
-This is cooke bases Task management system. so, you need to server run with same ip address.
+This is cookie bases Task Management system. so, you need to server run with same ip address.
 
-Vue project
+# Vue project
 
 Fist clone the project
 
@@ -10,7 +10,7 @@ Fist clone the project
 git clone https://github.com/amdad121/task-management.git
 ```
 
-then go to project directory and run
+then go to project directory
 
 ```sh
 cd task-management
