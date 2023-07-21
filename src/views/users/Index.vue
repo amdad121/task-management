@@ -27,7 +27,7 @@ const deleteUser = async (id) => {
 <template>
   <AppLayout>
     <div>
-      <h3 class="border-b text-lg font-semibold py-2 mb-2">Tasks</h3>
+      <h3 class="border-b text-lg font-semibold py-2 mb-2">Users</h3>
       <div>
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
           {{ status }}
